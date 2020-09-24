@@ -1,0 +1,34 @@
+[
+    {
+        "name":"a2b",
+        "city":"mysore",
+        "type":"ac",
+        "cuisine":["chineese","korean","spanish"]
+    },
+    {
+        "name":"barbeque",
+        "city":"bangalore",
+        "type":"nonac",
+        "cuisine":["indian","chineese","korean"]
+    },
+    {
+        "name":"Mythri",
+        "city":"chennai",
+        "type":"ac",
+        "cuisine":["indian","chineese","korean"]
+    },
+    {
+        "name":"saravana bhavan",
+        "city":"coimbatore",
+        "type":"ac",
+        "cuisine":["indian","chineese","korean"]
+    }
+    ,
+    {
+        "name":"thalapakatti",
+        "city":"chennai",
+        "type":"nonac",
+        "cuisine":["indian","chineese","korean"]
+    }
+    
+    ]
