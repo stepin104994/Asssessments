@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate(){
+            var name=document.getElementById('name').value;
+            var email=document.getElementById('email').value;
+            var password=document.getElementById('password').value;
+            var phone=document.getElementById('phone').value;
+            var city=document.getElementById('city').value;            
+            
+            var nameLength=name.length;
+            var passwordLength=password.length;
+            var phoneLength=phone.length;
+            var letters = /^[A-Za-z]+$/;
+            var mailformat = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            var pattern=/^(((?=.[a-z])(?=.[A-Z]))|((?=.[a-z])(?=.[0-9]))|((?=.[A-Z])(?=.[0-9])))(?=.{6,})/;
+            if(!(name.match(letters)) || nameLength<3 || nameLength>15)
+            {
+                alert("Name cannot be empty or number or less than 3 or greater than 15");
+                document.getElementById('name').focus();
+            }
+            
+            else if(!(email!="" && email.match(mailformat)))
+            {
+                alert("e-mail cannot be empty or invalid e-mail address....please check again");
+                document.getElementById('email').focus();
+            }
+            else if(!(password.match(pattern)) || passwordLength<7 || passwordLength>15)
+            {
+                alert("password must contain upper case, lower case, special character, number and lenght should be between 7-15");
+                document.getElementById('password').focus();
+            }
+            else if(isNaN(phone) || phoneLength!=10 )
+            {
+                alert("Phone number cannot be null or string and should be 10 digits");
+                document.getElementById('phone').focus();
+            }
+            else if(city=="" || !isNaN(city))
+            {
+                alert("city cannot be null or number");
+                document.getElementById('city').focus();
+
+            }
+            else
+            {
+                document.getElementById("myForm").submit();
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="success.html" id="myForm" >
+        Name:<input type="text" id="name"><br><br>
+        E-mail:<input type="text" id="email"><br><br>
+        Password:<input type="password" id="password"><br><br>
+        Phone Number:<input type="text" id="phone"><br><br>
+        city:<input type="text" id="city"><br><br>
+        
+        <input type="button" value="register" onclick="validate();" >
+    </form>
+</body>
+</html>

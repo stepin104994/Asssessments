@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <script>
+        function storeName(){
+            username = document.getElementById("username").value;
+            if(validateName(username)&&ValidateUser(username)){
+            sessionStorage.setItem('username',username);
+            sessionStorage.setItem('message','have a great day')
+            document.myform.submit();
+            }
+        }
+        function validateName(username){
+            if(username=='')
+            alert('enter name');
+            else if(username.length<3)
+                alert('username should be greater than 3');
+            else if(!(isNaN(username)))
+                alert('enter name');
+            else
+                return true;
+        }
+        function ValidateUser(username){
+            array=['nisu','tom'];
+            array.forEach(function(elem)  {         
+                      if(elem==username){
+                    alert('already exist');
+                    return false;
+                }
+                
+            });
+            return true;
+
+        }
+    </script>
+</head>
+<body>
+    <form action="sessionget.html" name="myform"></form>
+    Name<input type="text"  id="username">
+    <input type="button" value="Register" onclick="storeName()">
+    <div id="myid"></div>
+</form>
+</body>
+</html>

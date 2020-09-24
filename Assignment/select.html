@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myFunction() {
+    var x = document.getElementById("mySelect").value;
+   
+    if(x==0)
+    {
+        document.getElementById("sublist").innerHTML = 
+        " <h1>TV Names</h1><ul><li> Sony </li><li> Mi </li><li>LG</li></ul>";
+    }
+    else if(x==1)
+    {
+        document.getElementById("sublist").innerHTML = 
+        " <h1>Cars are</h1><ul><li> Skoda </li><li> Honda </li><li>KIA</li></ul>";
+    }
+    else if(x==2)
+    {
+        document.getElementById("sublist").innerHTML = 
+        " <h1>Bikes are</h1><ul><li> Honda </li><li> Hero </li><li>jupiter</li></ul>";
+    }
+    else if(x==3)
+    {
+        document.getElementById("sublist").innerHTML = 
+        " <h1>Mobiles are</h1><ul><li> Oppo </li><li> Vivo </li><li>Honor</li></ul>";
+    }
+}
+
+    </script>
+</head>
+<body>
+    <select id="mySelect" onchange="myFunction()">
+        <option >--select--</option>
+        <option value="0">Tv</option>
+        <option value="1">Car</option>
+        <option value="2">Bike</option>
+        <option value="3">Mobile</option>
+
+      </select>
+      
+     
+      
+      <p id="sublist"></p>
+</body>
+</html>

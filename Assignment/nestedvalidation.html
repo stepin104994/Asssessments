@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <script>
+        function register() {
+            var username = document.myform.username.value;
+            function validateform() {
+                if (username.length == null || username == "" || username.length < 3) {
+                    alert("Enter your Name")
+                    return false;
+                }
+                }
+            return validateform();
+        }
+        register()
+    </script>
+</head>
+
+<body>
+    <form action="onkeyup.html" name="myform" onsubmit=" return register()" method="POST">
+        <label>Enter Username</label>
+        <input type="text" name="username" value=" " placeholder="Username">
+        <input type="Submit"  value="register">
+    </form>
+
+</body>
+
+</html>
